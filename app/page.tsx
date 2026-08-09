@@ -17,7 +17,7 @@ const jsonLd = {
   "description": "Coach-run barbell club in Pittsburgh's Strip District featuring powerlifting, strength training, and direct coaching with zero contracts.",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "3120 Smallman St, Suite 01, Dock D",
+    "streetAddress": "4127 Smallman St",
     "addressLocality": "Pittsburgh",
     "addressRegion": "PA",
     "postalCode": "15201",
@@ -32,9 +32,9 @@ const jsonLd = {
     "Mo-Fr 05:00-21:00",
     "Sa 07:00-18:00"
   ],
-  "priceRange": "$",
+  "priceRange": "$$",
   "telephone": "+1-412-555-0199",
-  "url": "https://lockout-barbell.vercel.app"
+  "url": "https://lockout-gym.vercel.app"
 };
 
 export default function Page() {

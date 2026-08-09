@@ -14,7 +14,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://lockout-barbell.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://lockout-gym.vercel.app"),
   title: "LOCKOUT: Coach-Run Barbell Club | Pittsburgh, PA",
   description:
     "A coach-run barbell club in Pittsburgh's Strip District featuring powerlifting, general strength, peaking cycles, and structured coaching tracks with zero contracts.",

@@ -33,9 +33,9 @@ export default function Footer() {
           <div className="footer-col">
             <h3>LOCATION</h3>
             <ul>
-              <li>412 IRON WORKS WAY</li>
-              <li>SUITE 01, DOCK D</li>
-              <li>CHICAGO, IL 60609</li>
+              <li>4127 SMALLMAN ST</li>
+              <li>STRIP DISTRICT</li>
+              <li>PITTSBURGH, PA 15201</li>
             </ul>
           </div>
 
@@ -50,9 +50,9 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div>© 2024 LOCKOUT BARBELL CLUB</div>
+          <div>© {new Date().getFullYear()} LOCKOUT BARBELL CLUB</div>
           <div className="center">BUILT FOR THE PLATFORM</div>
-          <div className="right">DESIGNED BY RAW STUDIO</div>
+          <div className="right">[Designed by Aawaiz Azhar]</div>
         </div>
       </div>
     </footer>
