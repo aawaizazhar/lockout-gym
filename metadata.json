@@ -1,0 +1,8 @@
+{
+  "name": "LOCKOUT: Coach-Run Barbell Club",
+  "description": "A coach-run barbell club in Pittsburgh's Strip District. 180 lifters, 4 tracks, zero contracts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

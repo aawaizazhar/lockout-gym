@@ -1,121 +1,136 @@
 import Reveal from "./Reveal";
-import BrutalButton from "./BrutalButton";
+import TextStagger from "./TextStagger";
 
 export default function Pricing() {
   return (
-    <section className="pricing" id="pricing" aria-label="Membership access">
+    <section className="pricing" id="pricing" aria-label="Membership plans">
       <div className="wrap">
         <div className="pricing-head">
           <div>
-            <Reveal>
-              <div className="section-num">SEC. 05 — ACCESS</div>
+            <Reveal variant="left" delay={0}>
+              <div className="section-num">SEC. 05 / HIGH-TICKET MEMBERSHIP</div>
             </Reveal>
-            <Reveal delay={0.05}>
-              <h2>
-                THREE DOORS.
-                <br />
-                <span className="italic-serif">No contracts.</span>
+            <TextStagger text="VELVET ROPE." as="h2" delay={0.1} staggerDelay={0.06} />
+            <Reveal variant="left" delay={0.2}>
+              <h2 style={{ marginTop: "-8px" }}>
+                <span className="italic-serif">Strictly capped at 100.</span>
               </h2>
             </Reveal>
           </div>
-          <Reveal delay={0.15}>
-            <p>
-              Month to month, priced like we mean it. If we&apos;re not making you stronger, you leave — that&apos;s the entire retention strategy.
-            </p>
+          <Reveal variant="right" delay={0.15}>
+            <div>
+              <p>
+                We capped total facility membership at 100 lifters. No open-gym drop-ins, no crowded platforms, zero waiting for equipment. Every tier guarantees assigned rack time, a 1:4 max athlete-to-coach ratio, bespoke programming, and private locker facilities.
+              </p>
+            </div>
           </Reveal>
         </div>
 
         <div className="tiers">
-          <Reveal>
-            <article className="t-card">
+          {/* Tier 1 */}
+          <Reveal variant="up" delay={0.1}>
+            <div className="t-card">
+              <span className="t-tag">LIMITED: 3 SLOTS LEFT</span>
               <div className="t-tier">
-                OPEN
-                <br />
-                PLATFORM
-                <small>THE BASE</small>
+                TIER 1
+                <small>M/W/F · MORNING RACK SLOTS (6:00 – 8:30 AM)</small>
               </div>
               <div className="t-middle">
-                <h3>Barbell access, no coaching.</h3>
+                <h3>Dawn Syndicate</h3>
                 <ul className="t-features">
-                  <li>All open hours access</li>
-                  <li>Intro session + lift assessment</li>
-                  <li>Chalk, belts, wraps supplied</li>
-                  <li>Cancel any month</li>
+                  <li>3× weekly coached rack sessions (1:4 ratio)</li>
+                  <li>Assigned Eleiko bar & platform per block</li>
+                  <li>Monthly velocity-based program adjustments</li>
+                  <li>Permanent private locker & keycard access</li>
+                  <li>Full recovery suite (sauna & cold plunge)</li>
                 </ul>
               </div>
-              <div className="t-price">
-                <div className="amount">$89</div>
-                <div className="per">/ MONTH</div>
-                <BrutalButton href="#cta" variant="ghost" className="t-cta">
-                  Request Access
-                </BrutalButton>
+              <div className="t-right">
+                <div className="t-price">
+                  <span className="amount">$580</span>
+                  <span className="per">/ MONTH</span>
+                </div>
+                <div className="t-cta">
+                  <a href="#apply" className="btn btn--primary">
+                    APPLY NOW <span className="ar">→</span>
+                  </a>
+                </div>
               </div>
-            </article>
+            </div>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <article className="t-card t-card--flag">
-              <span className="t-tag">MOST LIFTERS HERE</span>
+          {/* Tier 2 */}
+          <Reveal variant="scale" delay={0.2}>
+            <div className="t-card t-card--flag">
+              <span className="t-tag t-tag--flag">
+                <span className="t-tag-pulse" aria-hidden="true" />
+                MOST POPULAR: 2 SLOTS LEFT
+              </span>
               <div className="t-tier">
-                BARBELL
-                <br />
-                CLUB
-                <small>FLAGSHIP</small>
+                TIER 2
+                <small>4× WEEKLY · EVENING PRIME SLOTS (5:00 – 8:00 PM)</small>
               </div>
               <div className="t-middle">
-                <h3>Coached small-group sessions.</h3>
+                <h3>Prime Syndicate</h3>
                 <ul className="t-features">
-                  <li>3 coached sessions / week (BUILD)</li>
-                  <li>12-week programmed blocks</li>
-                  <li>Every set logged & reviewed</li>
-                  <li>Quarterly testing + progress report</li>
-                  <li>Open platform between sessions</li>
-                  <li>Everything in Open Platform</li>
+                  <li>4× weekly coached rack sessions (1:4 ratio)</li>
+                  <li>Dedicated competition calibrated steel bar</li>
+                  <li>Bi-weekly 1:1 video movement analysis</li>
+                  <li>Full competition meet prep & platform handling</li>
+                  <li>Executive locker, gear bay & recovery access</li>
                 </ul>
               </div>
-              <div className="t-price">
-                <div className="amount">$159</div>
-                <div className="per">/ MONTH</div>
-                <BrutalButton href="#cta" variant="primary" arrow className="t-cta">
-                  Apply Now
-                </BrutalButton>
+              <div className="t-right">
+                <div className="t-price">
+                  <span className="amount">$850</span>
+                  <span className="per">/ MONTH</span>
+                </div>
+                <div className="t-cta">
+                  <a href="#apply" className="btn btn--iron">
+                    APPLY NOW <span className="ar">→</span>
+                  </a>
+                </div>
               </div>
-            </article>
+            </div>
           </Reveal>
 
-          <Reveal delay={0.2}>
-            <article className="t-card t-card--top">
-              <span className="t-tag">LIMITED SEATS</span>
+          {/* Tier 3 */}
+          <Reveal variant="up" delay={0.3}>
+            <div className="t-card t-card--top">
+              <span className="t-tag">WAITLIST ONLY: 0 SLOTS</span>
               <div className="t-tier">
-                FULL
-                <br />
-                COACHING
-                <small>BY APPLICATION</small>
+                TIER 3
+                <small>UNRESTRICTED PLATFORM + 1:1 COACHING</small>
               </div>
               <div className="t-middle">
-                <h3>1:1 programming + meet prep.</h3>
+                <h3>Black Tier Executive</h3>
                 <ul className="t-features">
-                  <li>Unlimited coached sessions</li>
-                  <li>Individual percentages</li>
-                  <li>Monthly 1:1 with your coach</li>
-                  <li>Meet prep + attempt selection</li>
-                  <li>Priority Meet Team tryout placement</li>
-                  <li>Everything in Barbell Club</li>
+                  <li>Unlimited platform access + 2× 1:1 private sessions/mo</li>
+                  <li>100% custom individual programming & load regulation</li>
+                  <li>Dedicated personal competition rack & private storage bay</li>
+                  <li>24/7 direct coach messaging & biomechanics audits</li>
+                  <li>Complete contest handling, nutrition & recovery protocols</li>
                 </ul>
               </div>
-              <div className="t-price">
-                <div className="amount">$249</div>
-                <div className="per">/ MONTH</div>
-                <BrutalButton href="#cta" variant="iron" className="t-cta">
-                  Request Interview
-                </BrutalButton>
+              <div className="t-right">
+                <div className="t-price">
+                  <span className="amount">$1,250</span>
+                  <span className="per">/ MONTH</span>
+                </div>
+                <div className="t-cta">
+                  <a href="#apply" className="btn btn--primary">
+                    JOIN WAITLIST <span className="ar">→</span>
+                  </a>
+                </div>
               </div>
-            </article>
+            </div>
           </Reveal>
         </div>
 
-        <Reveal delay={0.2}>
-          <p className="pricing-note">CANCEL BY TELLING A COACH · NO FORMS · NO RETENTION CALL · NO FREEZE FEES</p>
+        <Reveal variant="up" delay={0.35}>
+          <div className="pricing-note">
+            ALL MEMBERSHIPS REQUIRE A MANDATORY 60-MINUTE MOVEMENT ASSESSMENT & BIO-MECHANICAL EVALUATION ($150) PRIOR TO ADMISSION. NO EXCEPTIONS.
+          </div>
         </Reveal>
       </div>
     </section>

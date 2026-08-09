@@ -1,5 +1,5 @@
 import Reveal from "./Reveal";
-import Image from "next/image";
+import TextStagger from "./TextStagger";
 
 export default function Coaches() {
   return (
@@ -7,47 +7,50 @@ export default function Coaches() {
       <div className="wrap">
         <div className="coaches-head">
           <div>
-            <Reveal>
-              <div className="section-num">SEC. 04 — THE COACHES</div>
+            <Reveal variant="left">
+              <div className="section-num">SEC. 04 / THE COACHES</div>
             </Reveal>
-            <Reveal delay={0.05}>
-              <h2>
-                COACHES
-                <br />
-                WHO COUNT
-                <br />
+            <TextStagger
+              text="COACHES WHO COUNT"
+              as="h2"
+              delay={0.1}
+              staggerDelay={0.05}
+            />
+            <Reveal variant="left" delay={0.2}>
+              <h2 style={{ marginTop: "-8px" }}>
                 <span className="italic-serif">every rep.</span>
               </h2>
             </Reveal>
           </div>
-          <Reveal delay={0.15}>
+          <Reveal variant="right" delay={0.15}>
             <p>
-              Small groups only work if the coach actually <em>coaches</em>. Ours still compete, write their own sessions, and show up when you&apos;re on the platform. No clipboard warriors.
+              Small groups only work if the coach actually <em>coaches</em>.
+              Ours still compete, write their own sessions, and show up when
+              you&apos;re on the platform. No clipboard warriors.
             </p>
           </Reveal>
         </div>
 
         <div className="dossier">
           {/* Coach 1 */}
-          <Reveal>
+          <Reveal variant="left" delay={0.1}>
             <div className="dossier-row">
               <div className="d-photo d-photo--huge">
                 <div className="d-number">01</div>
                 <div className="photo-brutal">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    loading="lazy"
                     src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80"
                     alt="Dana Whitfield, owner and head coach."
-                    fill
-                    sizes="(max-width:768px) 100vw, 50vw"
-                    className="object-cover"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
               <div className="d-info">
                 <div className="d-role">OWNER · HEAD COACH</div>
                 <h3 className="d-name">
-                  DANA
-                  <br />
+                  DANA<br />
                   WHITFIELD
                   <span className="d-name-italic">writes every block that leaves this building.</span>
                 </h3>
@@ -70,13 +73,12 @@ export default function Coaches() {
           </Reveal>
 
           {/* Coach 2 (flipped) */}
-          <Reveal>
+          <Reveal variant="right" delay={0.2}>
             <div className="dossier-row dossier-row--flip">
               <div className="d-info">
                 <div className="d-role">COMPETITION LEAD</div>
                 <h3 className="d-name">
-                  TERRENCE
-                  <br />
+                  TERRENCE<br />
                   VAUGHN
                   <span className="d-name-italic">fourteen years as a referee, 40+ meets handled.</span>
                 </h3>
@@ -98,12 +100,12 @@ export default function Coaches() {
               <div className="d-photo">
                 <div className="d-number d-number--iron">02</div>
                 <div className="photo-brutal">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    loading="lazy"
                     src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80"
                     alt="Terrence Vaughn, competition lead."
-                    fill
-                    sizes="(max-width:768px) 100vw, 50vw"
-                    className="object-cover"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
@@ -111,30 +113,29 @@ export default function Coaches() {
           </Reveal>
 
           {/* Coach 3 */}
-          <Reveal>
+          <Reveal variant="left" delay={0.25}>
             <div className="dossier-row">
               <div className="d-photo">
                 <div className="d-number d-number--blood">03</div>
                 <div className="photo-brutal">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    loading="lazy"
                     src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80"
                     alt="Priya Raman, foundations lead."
-                    fill
-                    sizes="(max-width:768px) 100vw, 50vw"
-                    className="object-cover"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
               <div className="d-info">
                 <div className="d-role">FOUNDATIONS LEAD</div>
                 <h3 className="d-name">
-                  PRIYA
-                  <br />
+                  PRIYA<br />
                   RAMAN
                   <span className="d-name-italic">four years in physio before the platform.</span>
                 </h3>
                 <p className="d-bio">
-                  Owns the six-person cap in Foundations. Nothing loads until the position is right — and she&apos;ll make you earn every pound on the bar.
+                  Owns the six-person cap in Foundations. Nothing loads until the position is right, and she&apos;ll make you earn every pound on the bar.
                 </p>
                 <div className="d-specs">
                   <div className="d-spec">

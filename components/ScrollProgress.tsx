@@ -8,26 +8,60 @@ export default function ScrollProgress() {
   useEffect(() => {
     const el = bar.current;
     if (!el) return;
-    const onScroll = () => {
+
+    let maxScroll = 1;
+    let ticking = false;
+
+    const measureMaxScroll = () => {
       const h = document.documentElement;
-      const max = h.scrollHeight - h.clientHeight;
-      el.style.width = `${max > 0 ? (h.scrollTop / max) * 100 : 0}%`;
+      const b = document.body;
+      const scrollHeight = Math.max(h.scrollHeight, b.scrollHeight);
+      const clientHeight = h.clientHeight;
+      maxScroll = Math.max(1, scrollHeight - clientHeight);
     };
-    onScroll();
+
+    const update = () => {
+      const scrollY = window.scrollY || window.pageYOffset || 0;
+      const progress = Math.min(1, Math.max(0, scrollY / maxScroll));
+      el.style.transform = `scale3d(${progress.toFixed(4)}, 1, 1)`;
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    };
+
+    measureMaxScroll();
+    update();
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
+    window.addEventListener("resize", measureMaxScroll);
+
+    const resizeObserver = new ResizeObserver(() => {
+      measureMaxScroll();
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    });
+    resizeObserver.observe(document.documentElement);
+
     return () => {
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
+      window.removeEventListener("resize", measureMaxScroll);
+      resizeObserver.disconnect();
     };
   }, []);
 
   return (
     <div
       ref={bar}
+      className="scroll-progress"
+      id="scrollProgress"
       aria-hidden="true"
-      className="fixed left-0 top-0 z-[10000] h-1 bg-caution"
-      style={{ width: "0%", boxShadow: "0 0 0 1px var(--color-iron)" }}
     />
   );
 }
