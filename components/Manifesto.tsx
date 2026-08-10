@@ -66,63 +66,64 @@ export default function Manifesto() {
     <section className="manifesto" id="manifesto" aria-label="Manifesto">
       <div ref={containerRef} className="manifesto-container">
         <div className="manifesto-sticky">
-          <div className="manifesto-num">SEC. 02 / THE INDUSTRY</div>
-          <div className="manifesto-eyebrow">WHAT WE&apos;RE AGAINST</div>
+          <div className="manifesto-inner">
+            <div className="manifesto-header">
+              <div className="manifesto-num">SEC. 02 / THE INDUSTRY</div>
+              <div className="manifesto-eyebrow">WHAT WE&apos;RE AGAINST</div>
+            </div>
 
-          <div className="manifesto-list">
-            {lines.map((text, idx) => {
-              const lineStrikeProgress = Math.max(
-                0,
-                Math.min(1, (scrollProgress - idx * 0.2) / 0.2)
-              );
-              const isFullyStruck = lineStrikeProgress >= 1;
-              const isBeingStruck = lineStrikeProgress > 0 && lineStrikeProgress < 1;
-              const isCurrentActive = idx === activeStep;
+            <div className="manifesto-list">
+              {lines.map((text, idx) => {
+                const lineStrikeProgress = Math.max(
+                  0,
+                  Math.min(1, (scrollProgress - idx * 0.2) / 0.2)
+                );
+                const isFullyStruck = lineStrikeProgress >= 1;
+                const isBeingStruck = lineStrikeProgress > 0 && lineStrikeProgress < 1;
+                const isCurrentActive = idx === activeStep;
 
-              let lineClass = "manifesto-line block w-full";
-              if (isFullyStruck) {
-                lineClass += " struck";
-              } else if (isCurrentActive || isBeingStruck) {
-                lineClass += " active";
-              }
+                let lineClass = "manifesto-line block w-full";
+                if (isFullyStruck) {
+                  lineClass += " struck";
+                } else if (isCurrentActive || isBeingStruck) {
+                  lineClass += " active";
+                }
 
-              let textColor = "var(--bone)";
-              if (isFullyStruck) {
-                textColor = "var(--concrete)";
-              } else if (isBeingStruck || isCurrentActive) {
-                textColor = "var(--caution)";
-              }
+                let textColor = "var(--bone)";
+                if (isFullyStruck) {
+                  textColor = "var(--concrete)";
+                } else if (isBeingStruck || isCurrentActive) {
+                  textColor = "var(--caution)";
+                }
 
-              return (
-                <div key={idx} className={lineClass} data-idx={idx}>
-                  <span
-                    className="manifesto-text"
-                    style={{
-                      color: textColor,
-                      opacity: isFullyStruck ? 0.35 : 1,
-                      ["--strike-width" as string]: `${(lineStrikeProgress * 100).toFixed(1)}%`,
-                      transition: isReducedMotion ? "none" : "color 0.2s, opacity 0.2s",
-                    }}
-                  >
-                    {text}
-                  </span>
-                </div>
-              );
-            })}
-            <div
-              className={`manifesto-line reveal ${revealProgress > 0.05 ? "in" : ""}`}
-              style={{
-                opacity: isReducedMotion ? 1 : revealProgress,
-                transform: isReducedMotion
-                  ? "none"
-                  : `translate3d(0, ${(1 - revealProgress) * 24}px, 0)`,
-                transition: isReducedMotion
-                  ? "none"
-                  : "opacity 0.3s ease-out, transform 0.3s ease-out",
-              }}
-              data-idx="4"
-            >
-              100 lifters. Guaranteed rack. Zero bullshit.
+                return (
+                  <div key={idx} className={lineClass} data-idx={idx}>
+                    <span
+                      className="manifesto-text"
+                      style={{
+                        color: textColor,
+                        opacity: isFullyStruck ? 0.35 : 1,
+                        ["--strike-width" as string]: `${(lineStrikeProgress * 100).toFixed(1)}%`,
+                        transition: isReducedMotion ? "none" : "color 0.2s, opacity 0.2s",
+                      }}
+                    >
+                      {text}
+                    </span>
+                  </div>
+                );
+              })}
+              <div
+                className={`manifesto-line reveal ${revealProgress > 0.05 ? "in" : ""}`}
+                style={{
+                  opacity: isReducedMotion ? 1 : revealProgress,
+                  transition: isReducedMotion
+                    ? "none"
+                    : "opacity 0.3s ease-out",
+                }}
+                data-idx="4"
+              >
+                100 lifters. Guaranteed rack. Zero bullshit.
+              </div>
             </div>
           </div>
         </div>

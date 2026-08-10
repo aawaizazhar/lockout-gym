@@ -129,9 +129,9 @@ export default function Programs() {
       const progress = Math.max(0, Math.min(1, (scrollY - containerTop + navHeight) / scrollable));
 
       if (isMobile) {
-        pTrack.style.transform = `translate3d(0, ${(-progress * maxTranslate).toFixed(2)}px, 0)`;
+        pTrack.style.transform = `translateY(${(-progress * maxTranslate).toFixed(2)}px)`;
       } else {
-        pTrack.style.transform = `translate3d(${(-progress * maxTranslate).toFixed(2)}px, 0, 0)`;
+        pTrack.style.transform = `translateX(${(-progress * maxTranslate).toFixed(2)}px)`;
       }
       ticking = false;
     };

@@ -23,7 +23,9 @@ export default function ScrollProgress() {
     const update = () => {
       const scrollY = window.scrollY || window.pageYOffset || 0;
       const progress = Math.min(1, Math.max(0, scrollY / maxScroll));
-      el.style.transform = `scale3d(${progress.toFixed(4)}, 1, 1)`;
+      el.style.removeProperty("transform");
+      el.style.transform = "none";
+      el.style.width = `${(progress * 100).toFixed(2)}%`;
       ticking = false;
     };
 
