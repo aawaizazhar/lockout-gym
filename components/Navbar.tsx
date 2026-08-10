@@ -68,7 +68,7 @@ export default function Navbar() {
   return (
     <header className={`nav site-header ${open ? "menu-open" : ""}`} id="siteHeader">
       <div className="wrap nav-inner">
-        <Link href="#top" onClick={close} className="logo" aria-label="Lockout — home">
+        <Link href="#top" onClick={close} className="logo" aria-label="Lockout - home">
           <span className="logo-block" aria-hidden="true">L</span>
           <span>LOCKOUT</span>
         </Link>

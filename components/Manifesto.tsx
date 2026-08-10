@@ -67,7 +67,7 @@ export default function Manifesto() {
       <div ref={containerRef} className="manifesto-container">
         <div className="manifesto-sticky">
           <div className="manifesto-num">SEC. 02 / THE INDUSTRY</div>
-          <div className="manifesto-eyebrow">WHAT WE&apos;RE AGAINST //</div>
+          <div className="manifesto-eyebrow">WHAT WE&apos;RE AGAINST</div>
 
           <div className="manifesto-list">
             {lines.map((text, idx) => {

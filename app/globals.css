@@ -450,6 +450,7 @@ button:hover .ar {
 .ps-header {
   display: flex; align-items: center; justify-content: space-between;
   padding-bottom: 20px; border-bottom: 1px dashed rgba(255,255,255,.3);
+  padding-right: clamp(76px, 8vw, 92px);
   font: 500 11px/1 var(--mono); letter-spacing: .22em; text-transform: uppercase;
 }
 .ps-live {
@@ -459,6 +460,7 @@ button:hover .ar {
 .ps-tag {
   color: var(--concrete);
   font-size: 10px;
+  white-space: nowrap;
 }
 .ps-dot {
   width: 8px; height: 8px; border-radius: 50%; background: var(--blood);

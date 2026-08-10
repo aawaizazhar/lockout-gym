@@ -73,7 +73,7 @@ export default function AdmissionCriteria() {
             <Reveal key={item.id} variant="up" delay={0.08 * idx}>
               <div className="admission-card">
                 <div className="admission-card-head">
-                  <span className="admission-num">RULE //{item.id}</span>
+                  <span className="admission-num">RULE {item.id}</span>
                   <span className="admission-tag">{item.label}</span>
                 </div>
                 <h3 className="admission-title">{item.title}</h3>

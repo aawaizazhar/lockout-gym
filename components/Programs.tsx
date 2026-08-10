@@ -13,7 +13,7 @@ const programs = [
     img: "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=80",
     alt: "Lifter practicing hinge mechanics with a light barbell.",
     title: "First year under the bar.",
-    desc: "For beginners — or lifters coming back. We pattern the squat, hinge, press, and pull in that order. The weight doesn't move until the position earns it.",
+    desc: "For beginners · or lifters coming back. We pattern the squat, hinge, press, and pull in that order. The weight doesn't move until the position earns it.",
     specs: [
       ["2×", "PER WEEK"],
       ["60", "MIN / SESSION"],
@@ -30,7 +30,7 @@ const programs = [
     img: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=1000&q=80",
     alt: "Loaded plates along a concrete gym wall.",
     title: "The backbone of the gym.",
-    desc: "Twelve-week blocks, every set logged, bar weight that moves on a schedule — not a mood. Most lifters live here for years and keep setting PRs.",
+    desc: "Twelve-week blocks, every set logged, bar weight that moves on a schedule · not a mood. Most lifters live here for years and keep setting PRs.",
     specs: [
       ["3×", "PER WEEK"],
       ["75", "MIN / SESSION"],
@@ -64,7 +64,7 @@ const programs = [
     img: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=1000&q=80",
     alt: "Lifter locking out a heavy barbell on platform.",
     title: "Tryout only.",
-    desc: "Peaking cycles, attempt selection, a handler on every lift — and a coach who has stood exactly where you're trying to stand.",
+    desc: "Peaking cycles, attempt selection, a handler on every lift · and a coach who has stood exactly where you're trying to stand.",
     specs: [
       ["5–6×", "PER WEEK"],
       ["PEAK", "CYCLES"],
@@ -202,7 +202,7 @@ export default function Programs() {
           <div className="programs-header">
             <div>
               <Reveal variant="left">
-                <div className="section-num">SEC. 03 — THE METHOD</div>
+                <div className="section-num">SEC. 03 / THE METHOD</div>
               </Reveal>
               <TextStagger text="FOUR TRACKS." as="h2" delay={0.1} staggerDelay={0.05} />
               <Reveal variant="left" delay={0.2}>

@@ -66,7 +66,7 @@ export default function PlatformStatus() {
         <span className="ps-live">
           <span className="ps-dot" /> PLATFORM STATUS
         </span>
-        <span className="ps-tag">// LIVE TELEMETRY</span>
+        <span className="ps-tag">LIVE TELEMETRY</span>
       </div>
 
       <div className="ps-main-body">
