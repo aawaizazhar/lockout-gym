@@ -6,38 +6,41 @@
 
 ## Why This Exists
 
-Most gym and barbell club websites run on generic templates that don't reflect the intensity, discipline, or brand identity of the business behind them. LOCKOUT demonstrates what a custom-built, editorial-grade site looks like when it's designed specifically for a strength-focused gym — built to hold up under review from developers and recruiters, and to give gym owners a clear picture of what a premium web presence for their business could look like.
+Most gym and barbell club websites run on generic templates that don't reflect the intensity, discipline, or brand identity of the business behind them. LOCKOUT demonstrates what a custom-built, editorial-grade site looks like when it's designed specifically for a strength-focused gym, built to hold up under review from developers and recruiters, and to give gym owners a clear picture of what a premium web presence for their business could look like.
 
 ---
 
 ## Key Features
 
-- **Brutalist Editorial Aesthetic**: High-contrast, warm neutral color scheme paired with bold display typography (`Archivo Black`, `Fraunces`, `Space Grotesk`, and `JetBrains Mono`).
-- **Scroll-Driven Micro-Interactions**:
-  - **Manifesto Line-Striking**: Dynamic scroll-progress calculator that strikes through text lines as the user scrolls.
-  - **Text Stagger & Intersection Observer**: Responsive reveal animations built without heavy third-party animation runtimes.
-  - **Horizontal Program Rail**: Smooth horizontal motion showcasing training tracks (Foundations, Hypertrophy, Powerlifting, Peaking).
-  - **Scroll Progress Bar**: Real-time reading timeline pinned to the top viewport edge.
-- **Production-Grade SEO Suite**:
-  - Dynamic `sitemap.ts` and `robots.ts` generation via Next.js App Router.
-  - Structured data (`SportsActivityLocation` JSON-LD schema) for local search context.
-  - Comprehensive OpenGraph and Twitter card metadata.
-  - Multi-format favicon fallback chain (`SVG` and `.ico`).
-- **Accessibility & UX**:
-  - `prefers-reduced-motion` detection across all animation components.
-  - Keyboard skip links (`#main`) for screen reader and keyboard accessibility.
-  - Mobile-first responsive layout across all device viewports.
+* **Brutalist Editorial Aesthetic**: High-contrast, warm neutral color scheme paired with bold display typography (`Archivo Black`, `Fraunces`, `Space Grotesk`, and `JetBrains Mono`).
+* **Scroll-Driven Micro-Interactions**:
+
+  * **Manifesto Line-Striking**: Dynamic scroll-progress calculator that strikes through text lines as the user scrolls.
+  * **Text Stagger & Intersection Observer**: Responsive reveal animations built without heavy third-party animation runtimes.
+  * **Horizontal Program Rail**: Smooth horizontal motion showcasing training tracks (Foundations, Hypertrophy, Powerlifting, Peaking).
+  * **Scroll Progress Bar**: Real-time reading timeline pinned to the top viewport edge.
+* **Production-Grade SEO Suite**:
+
+  * Dynamic `sitemap.ts` and `robots.ts` generation via Next.js App Router.
+  * Structured data (`SportsActivityLocation` JSON-LD schema) for local search context.
+  * Comprehensive OpenGraph and Twitter card metadata.
+  * Multi-format favicon fallback chain (`SVG` and `.ico`).
+* **Accessibility & UX**:
+
+  * `prefers-reduced-motion` detection across all animation components.
+  * Keyboard skip links (`#main`) for screen reader and keyboard accessibility.
+  * Mobile-first responsive layout across all device viewports.
 
 ---
 
 ## Tech Stack
 
-- **Framework**: Next.js 16 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
-- **Fonts**: `@next/font/google` (Archivo Black, Fraunces, Space Grotesk, JetBrains Mono)
-- **Icons**: Lucide React
-- **Optimization**: Turbopack, Next.js Image Optimization
+* **Framework**: Next.js 16 (App Router)
+* **Language**: TypeScript
+* **Styling**: Tailwind CSS v4
+* **Fonts**: `@next/font/google` (Archivo Black, Fraunces, Space Grotesk, JetBrains Mono)
+* **Icons**: Lucide React
+* **Optimization**: Turbopack, Next.js Image Optimization
 
 ---
 
@@ -81,11 +84,11 @@ No environment variables are required for the current static build. The structur
 │   ├── Hero.tsx               # Primary editorial split view
 │   ├── Manifesto.tsx          # Scroll-based strike-through statement
 │   ├── Navbar.tsx             # Navigation header & mobile menu drawer
-│   ├── Pricing.tsx            # Tiered membership structure
-│   ├── Programs.tsx           # Training tracks horizontal rail
-│   ├── Reveal.tsx             # Intersection observer scroll-reveal wrapper
-│   └── ScrollProgress.tsx     # Top viewport scroll progress indicator
-│   └── TextStagger.tsx        # Character/word staggering animation wrapper
+│   ├── Pricing.tsx             # Tiered membership structure
+│   ├── Programs.tsx            # Training tracks horizontal rail
+│   ├── Reveal.tsx              # Intersection observer scroll-reveal wrapper
+│   └── ScrollProgress.tsx      # Top viewport scroll progress indicator
+│   └── TextStagger.tsx         # Character/word staggering animation wrapper
 ├── public/
 │   └── favicon.svg         # Clean vector favicon
 └── metadata.json           # Application descriptor metadata
@@ -97,28 +100,31 @@ No environment variables are required for the current static build. The structur
 
 ### Prerequisites
 
-- **Node.js**: `v18.17.0` or higher
-- **Package Manager**: `npm`, `yarn`, or `pnpm`
+* **Node.js**: `v18.17.0` or higher
+* **Package Manager**: `npm`, `yarn`, or `pnpm`
 
 ### Installation
 
 1. Clone the repository and navigate into the root directory:
+
    ```bash
    git clone https://github.com/aawaizazhar/lockout-gym.git
    cd lockout-gym
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Run the local development server:
+
    ```bash
    npm run dev
    ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+4. Open http://localhost:3000 in your browser to view the application.
 
 ---
 
@@ -140,7 +146,7 @@ npm run start
 
 ## License
 
-MIT License. The code in this repository is open for reference and learning. The design, content, and branding are intended as a portfolio case study rather than a drop-in template — if you're a gym or service business interested in a customized version of this site, reach out directly via the contact info below rather than reskinning the repo as-is.
+MIT License. The code in this repository is open for reference and learning. The design, content, and branding are intended as a portfolio case study rather than a drop-in template. If you're a gym or service business interested in a customized version of this site, reach out directly via the contact info below rather than reskinning the repo as-is.
 
 ---
 
@@ -148,7 +154,7 @@ MIT License. The code in this repository is open for reference and learning. The
 
 Built by **Aawaiz Azhar**, freelance web developer & AI automation specialist.
 
-- **Email**: aawaizazhar.dev@gmail.com
-- **LinkedIn**: [linkedin.com/in/aawaizazhar](https://www.linkedin.com/in/aawaizazhar)
+* **Email**: [aawaizazhar.dev@gmail.com](mailto:aawaizazhar.dev@gmail.com)
+* **LinkedIn**: [linkedin.com/in/aawaizazhar](https://www.linkedin.com/in/aawaizazhar)
 
 Available for custom website builds for gyms, physiotherapy clinics, and local service businesses.
