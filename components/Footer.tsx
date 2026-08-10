@@ -8,7 +8,7 @@ export default function Footer() {
               <span className="logo-block">L</span> LOCKOUT
             </a>
             <p>
-              A private barbell club for lifters who take the work seriously. 120 total members. 8 competition platforms. Zero bullshit.
+              A private barbell club for lifters who take the work seriously. 100 total members. 8 competition platforms. Zero bullshit.
             </p>
           </div>
 

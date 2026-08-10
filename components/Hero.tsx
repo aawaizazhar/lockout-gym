@@ -16,7 +16,7 @@ export default function Hero() {
             </div>
             <div className="right">
               <span>ISSUE Nº <b>06 / 2026</b></span>
-              <span>ROSTER CAP <b>180 LIFTERS</b></span>
+              <span>ROSTER CAP <b>100 LIFTERS</b></span>
               <span className="seats-tag">SEATS OPEN <b className="seats-num">07</b></span>
             </div>
           </div>
